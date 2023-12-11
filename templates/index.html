@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="">
+
+  <title> Pair Trading </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static\css\bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="static/images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="static/templates/index.html">
+            <span>
+              ProfitForge
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="getname">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trade">Trade</a>
+              </li>
+
+
+             
+              {% if logged_in %}
+              <li class="nav-item">
+                <a class="nav-link" href="logout"> <i class="fa fa-user" aria-hidden="true"></i> Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="login"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+              </li>
+                {% endif %}
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Pair <br>
+                      Trading
+                    </h1>
+                    <p>
+                      A "pair" is a combination of two assets that are traded together in pair trading based on their historical price
+                      relationship. Even though their values may occasionally diverge, these two assets are often chosen because they have a
+                      history of moving together in a fairly predictable way.
+                    </p>
+                   
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="static/images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      When and <br>
+                      Where
+                    </h1>
+                    <p>
+                    Pair trading is commonly used when two assets have a historical correlation but temporarily deviate from their typical
+                    relationship. Traders look for opportunities to enter the market when the spread between the two assets is expected to
+                    converge.
+                    </p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="static/images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      How and<br>
+                      Who
+                    </h1>
+                    <p>
+                      Pair trading involves taking a long position in one asset and a short position in another asset that are historically
+                      correlated. The goal is to profit from the convergence of their prices when they deviate from their typical
+                      relationship.
+                    
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="static/images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+        </ol>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Project <span>Services</span>
+          </h2>
+          <p>
+            There are various services provided but the main features are below
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Pair Trading
+                </h5>
+                <p>
+                  Find Pairs-- Trade -- Earn Profit
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s2.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Buy/Sell
+                </h5>
+                <p>
+                  Use to buy and Sell Stocks
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/s3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Historical Data
+                </h5>
+                <p>
+                  Get Past Data upto any limit you want and analyze it.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          About <span>Us</span>
+        </h2>
+        <p>
+          We are Group from AI&DS - B divison with members as Shreyash Patil, Tanmay Patil , Sudhanshu Pathrabe , Atharva Mohite
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="static/images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              We Are ProfitForge
+            </h3>
+            <p>
+            ProfitForge is a revolutionary pair trading platform built in Flask that provides customers with a full solution for
+            identifying and executing pair trading strategies. The programme searches historical data of numerous assets using
+            advanced algorithms, automatically selecting probable pairs with connected price movements. Here are a few sentences
+            that describe the main characteristics of ProfitForge:
+            </p>
+            <p>
+            "Welcome to ProfitForge, your cutting-edge technology-powered pair trading platform. ProfitForge demystifies the
+            difficult world of pair trading by analysing historical data from a wide range of financial instruments. Our clever
+            algorithms discover price movements that are connected, offering consumers with attractive buy and sell choices
+            </p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+
+  <!-- jQery -->
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="static\js\custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
